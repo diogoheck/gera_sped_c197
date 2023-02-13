@@ -32,7 +32,7 @@ def inserir_c197_sped(linhas_sped):
         # if linha.split('|')[1] == '0460':
         # print(linha)
         # achar item
-        if linha.split('|')[1] != 'C170' and linha.split('|')[1] != 'C190' and linha.split('|')[1] != 'C195' and achou_item:
+        if linha.split('|')[1] != 'C170' and linha.split('|')[1] != 'C190' and linha.split('|')[1] != 'C195' and linha.split('|')[1] != 'C191' and achou_item:
             achou_item = False
             for c197 in lista_c197:
 
