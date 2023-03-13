@@ -29,7 +29,9 @@ def inserir_c197_sped(linhas_sped):
     for linha in linhas_sped:
 
         # criar_registro_0460(linha)
-        # if linha.split('|')[1] == '0460':
+        if linha.split('|')[1] == '0000':
+            competencia = linha.split('|')[4][2:4]
+            print(competencia)
         # print(linha)
         # achar item
         if linha.split('|')[1] != 'C170' and linha.split('|')[1] != 'C190' and linha.split('|')[1] != 'C195' and linha.split('|')[1] != 'C191' and achou_item:
@@ -55,7 +57,7 @@ def inserir_c197_sped(linhas_sped):
             base_icms_item = linha.split('|')[13]
             imposto_calculado = round(float(base_icms_item_calculo * 0.13), 2)
             # print(linha)
-            if ultimo_c100[2:4] == '01':
+            if ultimo_c100[2:4] == competencia:
                 codigo_beneficio = 'RS99993006'
                 # soma_valor_apurado_rg1 += imposto_calculado
             else:
